@@ -7,13 +7,10 @@ import { cn } from '@/lib/utils';
 import { BatteryCharging, Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 
-const NavLink = ({ href, children, onClick, isScrolled }: { href: string, children: React.ReactNode, onClick?: () => void, isScrolled: boolean }) => (
+const NavLink = ({ href, children, onClick }: { href: string, children: React.ReactNode, onClick?: () => void }) => (
     <Link 
         href={href} 
-        className={cn(
-            "transition-all duration-300 hover:text-primary",
-            isScrolled ? "text-muted-foreground" : "text-white/90 hover:text-white"
-        )}
+        className="transition-colors hover:text-primary text-white/90"
         onClick={onClick}
     >
         {children}
@@ -38,9 +35,9 @@ export default function Header() {
 
   const navLinks = (
       <>
-        <NavLink href="#about" onClick={closeSheet} isScrolled={isScrolled}>About</NavLink>
-        <NavLink href="#how-it-works" onClick={closeSheet} isScrolled={isScrolled}>How It Works</NavLink>
-        <NavLink href="#why-it-matters" onClick={closeSheet} isScrolled={isScrolled}>Why It Matters</NavLink>
+        <NavLink href="#about" onClick={closeSheet}>About</NavLink>
+        <NavLink href="#how-it-works" onClick={closeSheet}>How It Works</NavLink>
+        <NavLink href="#why-it-matters" onClick={closeSheet}>Why It Matters</NavLink>
       </>
   )
 
@@ -48,26 +45,23 @@ export default function Header() {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled ? 'bg-background/80 backdrop-blur-lg border-b' : 'bg-transparent'
+        isScrolled ? 'bg-black/30 backdrop-blur-lg border-b border-white/20' : 'bg-transparent'
       )}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className={cn("flex items-center gap-2 font-bold text-lg", isScrolled ? "text-primary" : "text-white")}>
-          <BatteryCharging className={cn("h-6 w-6", isScrolled ? "text-primary" : "text-white")} />
+        <Link href="/" className="flex items-center gap-2 font-bold text-lg text-white">
+          <BatteryCharging className="h-6 w-6 text-white" />
           <span className="font-headline drop-shadow-sm">CitraCell</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks}
-          <Button asChild variant={isScrolled ? "default" : "outline"} size="sm" className={cn(
-              "font-semibold transition-transform duration-300 ease-in-out hover:scale-105",
-              !isScrolled && "bg-white/10 border-white/50 text-white hover:bg-white/20 hover:text-white"
-          )}>
+          <Button asChild variant="outline" size="sm" className="font-semibold transition-transform duration-300 ease-in-out hover:scale-105 bg-white/10 border-white/50 text-white hover:bg-white/20 hover:text-white">
             <Link href="#cta">Join Wishlist</Link>
           </Button>
         </nav>
         <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className={cn("md:hidden", !isScrolled && "text-white bg-transparent border-white/50 hover:bg-white/10 hover:text-white")}>
+            <Button variant="outline" size="icon" className="md:hidden text-white bg-transparent border-white/50 hover:bg-white/10 hover:text-white">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
