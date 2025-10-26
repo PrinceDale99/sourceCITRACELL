@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import { ArrowDown } from 'lucide-react';
 
 const CitrusLeaf = ({ className }: { className?: string }) => (
   <div className={cn("absolute opacity-50 blur-lg", className)}>
@@ -17,11 +18,11 @@ const CitrusLeaf = ({ className }: { className?: string }) => (
 );
 
 
-export default function HeroSection() {
+export default function HeroSection({ nextSection }: { nextSection?: string }) {
   const batteryImage = PlaceHolderImages.find(img => img.id === 'citracell-battery');
 
   return (
-    <section id="hero" className="relative h-[100vh] w-full flex items-center justify-center text-white overflow-hidden bg-gradient-to-br from-green-400/30 via-primary to-green-900">
+    <section id="hero" className="relative h-[100vh] w-full flex items-center justify-center text-white overflow-hidden bg-gradient-to-br from-green-400/30 via-primary to-green-900 scroll-snap-start">
       
       {/* Background Gradient Animation */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-accent/20 via-primary to-green-900 opacity-70 animate-gradient-xy"></div>
@@ -79,6 +80,15 @@ export default function HeroSection() {
             </div>
         </div>
       </div>
+      {nextSection && (
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+          <Link href={`#${nextSection}`}>
+            <Button variant="outline" size="icon" className="rounded-full animate-bounce">
+              <ArrowDown className="h-6 w-6" />
+            </Button>
+          </Link>
+        </div>
+      )}
     </section>
   );
 }

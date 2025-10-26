@@ -30,7 +30,7 @@ const steps: Step[] = [
 
 export default function HowItWorksSection({ nextSection }: { nextSection?: string }) {
   return (
-    <section id="how-it-works" className="relative min-h-[100vh] py-24 sm:py-32 bg-muted/50 flex items-center">
+    <section id="how-it-works" className="relative min-h-[100vh] py-24 sm:py-32 bg-muted/50 flex items-center scroll-snap-start">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <div className="mb-16 animate-in fade-in slide-in-from-bottom-16 duration-1000">
             <h2 className="text-4xl md:text-5xl font-bold text-primary font-headline">
