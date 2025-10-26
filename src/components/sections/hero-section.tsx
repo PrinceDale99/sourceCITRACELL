@@ -17,15 +17,17 @@ export default function HeroSection({ nextSection }: { nextSection?: string }) {
       <div className="relative z-10 container mx-auto px-4 md:px-6 grid md:grid-cols-2 items-center gap-8">
         <div className="flex justify-center animate-in fade-in slide-in-from-left-16 duration-1000 order-2 md:order-1 mt-12 md:mt-0">
           {batteryImage && (
-            <Image
-              src={batteryImage.imageUrl}
-              alt={batteryImage.description}
-              width={400}
-              height={600}
-              className="object-contain drop-shadow-2xl w-2/3 h-auto md:w-full max-w-[400px]"
-              data-ai-hint={batteryImage.imageHint}
-              unoptimized
-            />
+            <div className="animate-float">
+                <Image
+                src={batteryImage.imageUrl}
+                alt={batteryImage.description}
+                width={400}
+                height={600}
+                className="object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.25)] w-2/3 h-auto md:w-full max-w-[400px]"
+                data-ai-hint={batteryImage.imageHint}
+                unoptimized
+                />
+            </div>
           )}
         </div>
         <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 px-4 animate-in fade-in slide-in-from-right-16 duration-1000 order-1 md:order-2">
