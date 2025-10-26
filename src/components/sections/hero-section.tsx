@@ -23,7 +23,7 @@ export default function HeroSection({ nextSection }: { nextSection?: string }) {
                 alt={batteryImage.description}
                 width={400}
                 height={600}
-                className="object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.25)] w-2/3 h-auto md:w-full max-w-[400px]"
+                className="object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.25)] w-1/2 h-auto md:w-2/3 max-w-[300px]"
                 data-ai-hint={batteryImage.imageHint}
                 unoptimized
                 />
