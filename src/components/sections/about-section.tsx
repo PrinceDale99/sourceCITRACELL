@@ -27,9 +27,9 @@ export default function AboutSection({ nextSection }: { nextSection?: string }) 
             </p>
             <ul className="space-y-4">
               {benefits.map((benefit, index) => (
-                <li key={index} className="flex items-center gap-3">
-                  <CircleCheckBig className="h-6 w-6 text-accent" />
-                  <span className="text-lg text-green-100 font-medium">{benefit}</span>
+                <li key={index} className="flex items-center gap-3 group transition-all duration-300 transform hover:-translate-y-1">
+                  <CircleCheckBig className="h-6 w-6 text-accent/80 group-hover:text-accent transition-colors" />
+                  <span className="text-lg text-green-100 font-medium group-hover:text-white transition-colors">{benefit}</span>
                 </li>
               ))}
             </ul>

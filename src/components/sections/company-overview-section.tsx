@@ -68,7 +68,7 @@ export default function CompanyOverviewSection({ nextSection }: { nextSection?: 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {coreValues.map((value, index) => (
                         <div key={index} className="animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{ animationDelay: `${index * 150 + 300}ms`}}>
-                             <Card className="text-center h-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white/5 backdrop-blur-sm border-accent/20">
+                             <Card className="text-center h-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/5 backdrop-blur-sm border-accent/20 hover:border-accent/50 hover:shadow-accent/20">
                                 <CardHeader>
                                     <div className="mx-auto bg-accent rounded-full p-3 w-fit mb-3">
                                         <value.icon className="h-8 w-8 text-accent-foreground" />

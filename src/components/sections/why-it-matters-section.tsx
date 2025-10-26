@@ -44,7 +44,7 @@ export default function WhyItMattersSection({ nextSection }: { nextSection?: str
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {advantages.map((advantage, index) => (
-            <div key={index} className="flex flex-col items-start p-6 bg-white/5 rounded-2xl transition-all duration-300 hover:bg-white/10 hover:shadow-lg hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
+            <div key={index} className="flex flex-col items-start p-6 bg-white/5 rounded-2xl transition-all duration-300 hover:bg-white/10 hover:shadow-lg hover:-translate-y-2 hover:shadow-accent/10 animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
               <div className="bg-accent rounded-lg p-3 mb-4">
                   <advantage.icon className="h-8 w-8 text-accent-foreground" />
               </div>

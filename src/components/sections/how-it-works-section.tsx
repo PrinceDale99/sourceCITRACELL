@@ -43,7 +43,7 @@ export default function HowItWorksSection({ nextSection }: { nextSection?: strin
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <div key={index} className="animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{ animationDelay: `${index * 150}ms`}}>
-                <Card className="text-center h-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white/5 backdrop-blur-sm border-accent/20">
+                <Card className="text-center h-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/5 backdrop-blur-sm border-accent/20 hover:border-accent/50 hover:shadow-accent/20">
                     <CardHeader>
                         <div className="mx-auto bg-accent rounded-full p-4 w-fit mb-4">
                             <step.icon className="h-10 w-10 text-accent-foreground" />
