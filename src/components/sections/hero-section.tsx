@@ -21,6 +21,10 @@ export default function HeroSection({ nextSection }: { nextSection?: string }) {
         <Leaf className="absolute bottom-[15%] right-[10%] h-20 w-20 text-white/10 -rotate-12" strokeWidth={1} />
         <Leaf className="absolute bottom-[40%] right-[30%] h-12 w-12 text-white/5 filter blur-md" strokeWidth={1} />
         <Leaf className="absolute top-[50%] left-[40%] h-32 w-32 text-white/5 filter blur-lg -rotate-45" strokeWidth={1} />
+        <Leaf className="absolute top-[5%] right-[35%] h-12 w-12 text-white/10 rotate-45" strokeWidth={1} />
+        <Leaf className="absolute bottom-[5%] left-[5%] h-16 w-16 text-white/5 filter blur-sm" strokeWidth={1} />
+        <Leaf className="absolute top-[60%] left-[5%] h-20 w-20 text-white/10 -rotate-12" strokeWidth={1} />
+        <Leaf className="absolute top-[80%] right-[25%] h-24 w-24 text-white/5 filter blur-lg" strokeWidth={1} />
 
 
       <div className="relative z-10 container mx-auto px-4 md:px-6 grid md:grid-cols-2 items-center gap-8">
