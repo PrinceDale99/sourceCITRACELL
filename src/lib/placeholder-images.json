@@ -21,31 +21,31 @@
     {
       "id": "inventor-1",
       "description": "Portrait of Raven L. Pandakila",
-      "imageUrl": "/raven.png",
+      "imageUrl": "/raven.jpg",
       "imageHint": "person portrait"
     },
     {
       "id": "inventor-2",
       "description": "Portrait of Edelyn A. Capucao",
-      "imageUrl": "/edelyn.png",
+      "imageUrl": "/edelyn.jpg",
       "imageHint": "person portrait"
     },
     {
       "id": "inventor-3",
       "description": "Portrait of Ashley Heart A. Dela Cruz",
-      "imageUrl": "/ashley.png",
+      "imageUrl": "/ashley.jpg",
       "imageHint": "person portrait"
     },
     {
       "id": "inventor-4",
       "description": "Portrait of Charise E. Magdato",
-      "imageUrl": "/charise.png",
+      "imageUrl": "/charise.jpg",
       "imageHint": "person portrait"
     },
     {
       "id": "inventor-5",
       "description": "Portrait of Wylliana Nabablit",
-      "imageUrl": "/nabablit.png",
+      "imageUrl": "/nabablit.jpg",
       "imageHint": "person portrait"
     }
   ]
