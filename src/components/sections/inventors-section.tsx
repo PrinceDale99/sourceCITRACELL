@@ -2,7 +2,7 @@ import { ArrowDown } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { Card, CardContent } from "../ui/card";
+import { Card, CardContent, CardFooter } from "../ui/card";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 
@@ -37,7 +37,7 @@ export default function InventorsSection({ nextSection }: { nextSection?: string
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                         {inventors.map((inventor, index) => (
                             <div key={inventor.id} className="animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
-                                <Card className="relative text-center h-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white/5 backdrop-blur-sm border-accent/20 overflow-hidden group">
+                                <Card className="text-center h-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white/5 backdrop-blur-sm border-accent/20 overflow-hidden group">
                                     <CardContent className="p-0">
                                         {inventor.image && (
                                             <Image
@@ -50,9 +50,9 @@ export default function InventorsSection({ nextSection }: { nextSection?: string
                                             />
                                         )}
                                     </CardContent>
-                                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                                        <h3 className="text-lg font-semibold text-white drop-shadow-md">{inventor.name}</h3>
-                                    </div>
+                                    <CardFooter className="p-3 bg-black/20 backdrop-blur-sm">
+                                        <h3 className="text-sm font-semibold text-white w-full text-center">{inventor.name}</h3>
+                                    </CardFooter>
                                 </Card>
                             </div>
                         ))}
