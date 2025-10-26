@@ -20,9 +20,9 @@ export default function HeroSection() {
             <Image
               src={batteryImage.imageUrl}
               alt={batteryImage.description}
-              width={350}
-              height={525}
-              className="object-contain drop-shadow-[0_25px_30px_rgba(0,0,0,0.4)] max-w-[200px] sm:max-w-[250px] md:max-w-[300px]"
+              width={200}
+              height={300}
+              className="object-contain drop-shadow-[0_25px_30px_rgba(0,0,0,0.4)] max-w-[120px] sm:max-w-[150px] md:max-w-[200px]"
               data-ai-hint={batteryImage.imageHint}
               priority
               unoptimized
