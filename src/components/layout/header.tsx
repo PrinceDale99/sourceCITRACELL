@@ -10,7 +10,7 @@ import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 const NavLink = ({ href, children, onClick }: { href: string, children: React.ReactNode, onClick?: () => void }) => (
     <Link 
         href={href} 
-        className="text-muted-foreground transition-colors hover:text-foreground"
+        className="text-muted-foreground transition-all duration-300 hover:text-primary"
         onClick={onClick}
     >
         {children}
@@ -55,7 +55,7 @@ export default function Header() {
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks}
-          <Button asChild variant="default" size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
+          <Button asChild variant="default" size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-transform duration-300 ease-in-out hover:scale-105">
             <Link href="#cta">Get Notified</Link>
           </Button>
         </nav>
@@ -75,7 +75,7 @@ export default function Header() {
                 <nav className="flex flex-col gap-4 text-lg">
                   {navLinks}
                 </nav>
-                <Button asChild variant="default" className="mt-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
+                <Button asChild variant="default" className="mt-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-transform duration-300 ease-in-out hover:scale-105">
                     <Link href="#cta" onClick={closeSheet}>Get Notified</Link>
                 </Button>
               </div>

@@ -43,7 +43,7 @@ export default function HowItWorksSection({ nextSection }: { nextSection?: strin
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <div key={index} className="animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{ animationDelay: `${index * 150}ms`}}>
-                <Card className="text-center h-full shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 bg-card/50 backdrop-blur-sm border-primary/20">
+                <Card className="text-center h-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-card/50 backdrop-blur-sm border-primary/20">
                     <CardHeader>
                         <div className="mx-auto bg-primary rounded-full p-4 w-fit mb-4">
                             <step.icon className="h-10 w-10 text-primary-foreground" />
@@ -61,7 +61,7 @@ export default function HowItWorksSection({ nextSection }: { nextSection?: strin
        {nextSection && (
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
           <Link href={`#${nextSection}`}>
-            <Button variant="outline" size="icon" className="rounded-full animate-bounce">
+            <Button variant="outline" size="icon" className="rounded-full animate-bounce transition-transform duration-300 ease-in-out hover:scale-110">
               <ArrowDown className="h-6 w-6" />
             </Button>
           </Link>
