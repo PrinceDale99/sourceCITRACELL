@@ -35,7 +35,7 @@ export default function InventorsSection({ nextSection }: { nextSection?: string
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                     {inventors.map((inventor, index) => (
                         <div key={inventor.id} className="animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{ animationDelay: `${index * 150}ms` }}>
-                            <Card className="text-center h-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white/5 backdrop-blur-sm border-accent/20 overflow-hidden">
+                            <Card className="relative text-center h-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white/5 backdrop-blur-sm border-accent/20 overflow-hidden group">
                                 <CardContent className="p-0">
                                     {inventor.image && (
                                         <Image
@@ -43,15 +43,15 @@ export default function InventorsSection({ nextSection }: { nextSection?: string
                                             alt={`Portrait of ${inventor.name}`}
                                             width={400}
                                             height={400}
-                                            className="object-cover w-full h-full aspect-square"
+                                            className="object-cover w-full h-full aspect-square transition-transform duration-300 group-hover:scale-110"
                                             data-ai-hint={inventor.image.imageHint}
                                         />
                                     )}
                                 </CardContent>
+                                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                                    <h3 className="text-lg font-semibold text-white drop-shadow-md">{inventor.name}</h3>
+                                </div>
                             </Card>
-                            <div className="mt-4 text-center">
-                                <h3 className="text-lg font-semibold text-white">{inventor.name}</h3>
-                            </div>
                         </div>
                     ))}
                 </div>
