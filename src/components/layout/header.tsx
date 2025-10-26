@@ -62,7 +62,7 @@ export default function Header() {
               "font-semibold transition-transform duration-300 ease-in-out hover:scale-105",
               !isScrolled && "bg-white/10 border-white/50 text-white hover:bg-white/20 hover:text-white"
           )}>
-            <Link href="#cta">Get Notified</Link>
+            <Link href="#cta">Join Wishlist</Link>
           </Button>
         </nav>
         <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
@@ -84,7 +84,7 @@ export default function Header() {
                     <Link href="#why-it-matters" onClick={closeSheet} className="text-muted-foreground transition-all duration-300 hover:text-primary">Why It Matters</Link>
                 </nav>
                 <Button asChild variant="default" className="mt-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-transform duration-300 ease-in-out hover:scale-105">
-                    <Link href="#cta" onClick={closeSheet}>Get Notified</Link>
+                    <Link href="#cta" onClick={closeSheet}>Join Wishlist</Link>
                 </Button>
               </div>
           </SheetContent>

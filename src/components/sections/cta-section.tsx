@@ -57,9 +57,9 @@ export default function CtaSection() {
             <div className="animate-in fade-in slide-in-from-right-16 duration-1000">
                 <Card className="bg-background/20 backdrop-blur-md border-white/20">
                     <CardHeader>
-                        <CardTitle className="text-white">Join the Waitlist</CardTitle>
+                        <CardTitle className="text-white">Join the Wishlist</CardTitle>
                         <CardDescription className="text-gray-300">
-                        Enter your email to get notified when we launch.
+                        Enter your email to join the wishlist.
                         </CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -83,7 +83,7 @@ export default function CtaSection() {
                             )}
                             />
                             <Button type="submit" size="lg" className="h-12 bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg px-8 transition-transform duration-300 ease-in-out hover:scale-105" disabled={form.formState.isSubmitting}>
-                            {form.formState.isSubmitting ? 'Subscribing...' : 'Subscribe'}
+                            {form.formState.isSubmitting ? 'Joining...' : 'Join Wishlist'}
                             </Button>
                         </form>
                         </Form>

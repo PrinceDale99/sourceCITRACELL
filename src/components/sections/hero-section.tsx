@@ -22,8 +22,8 @@ export default function HeroSection() {
                     <Image
                     src={batteryImage.imageUrl}
                     alt={batteryImage.description}
-                    width={150}
-                    height={225}
+                    width={100}
+                    height={150}
                     className="object-contain drop-shadow-[0_25px_30px_rgba(0,0,0,0.4)]"
                     data-ai-hint={batteryImage.imageHint}
                     priority
@@ -44,7 +44,7 @@ export default function HeroSection() {
                 <div className="mt-8">
                 <Link href="#cta">
                     <Button size="lg" className="bg-white/10 border-white/30 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:bg-gradient-to-r hover:from-accent/80 hover:to-primary/80 hover:border-transparent hover:text-primary-foreground">
-                        Notify Me
+                        Join Wishlist
                     </Button>
                 </Link>
                 </div>
