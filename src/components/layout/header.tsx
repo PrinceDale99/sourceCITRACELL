@@ -36,6 +36,7 @@ export default function Header() {
   const navLinks = (
       <>
         <NavLink href="#about" onClick={closeSheet}>About</NavLink>
+        <NavLink href="#company-overview" onClick={closeSheet}>Company</NavLink>
         <NavLink href="#how-it-works" onClick={closeSheet}>How It Works</NavLink>
         <NavLink href="#why-it-matters" onClick={closeSheet}>Why It Matters</NavLink>
       </>
@@ -74,6 +75,7 @@ export default function Header() {
                 </Link>
                 <nav className="flex flex-col gap-4 text-lg">
                     <Link href="#about" onClick={closeSheet} className="text-muted-foreground transition-all duration-300 hover:text-primary">About</Link>
+                    <Link href="#company-overview" onClick={closeSheet} className="text-muted-foreground transition-all duration-300 hover:text-primary">Company</Link>
                     <Link href="#how-it-works" onClick={closeSheet} className="text-muted-foreground transition-all duration-300 hover:text-primary">How It Works</Link>
                     <Link href="#why-it-matters" onClick={closeSheet} className="text-muted-foreground transition-all duration-300 hover:text-primary">Why It Matters</Link>
                 </nav>
