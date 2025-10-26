@@ -5,38 +5,30 @@ import Link from 'next/link';
 import { ArrowDown } from 'lucide-react';
 
 export default function HeroSection({ nextSection }: { nextSection?: string }) {
-  const heroBgImage = PlaceHolderImages.find(img => img.id === 'hero-background');
   const batteryImage = PlaceHolderImages.find(img => img.id === 'citracell-battery');
 
   return (
-    <section id="hero" className="relative h-[100vh] min-h-[700px] w-full flex items-center text-white overflow-hidden">
-      {heroBgImage && (
-        <Image
-          src={heroBgImage.imageUrl}
-          alt={heroBgImage.description}
-          fill
-          className="object-cover"
-          priority
-          data-ai-hint={heroBgImage.imageHint}
-        />
-      )}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
-      
+    <section id="hero" className="relative h-[100vh] min-h-[700px] w-full flex items-center text-white overflow-hidden bg-gradient-to-br from-accent/70 via-primary to-green-800">
+        {/* Decorative citrus splashes */}
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-yellow-300/20 rounded-full mix-blend-soft-light filter blur-2xl animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-lime-400/20 rounded-full mix-blend-soft-light filter blur-2xl animate-blob animation-delay-4000"></div>
+        <div className="absolute bottom-1/2 right-1/2 w-48 h-48 bg-orange-300/10 rounded-full mix-blend-soft-light filter blur-xl animate-blob"></div>
+
       <div className="relative z-10 container mx-auto px-4 md:px-6 grid md:grid-cols-2 items-center gap-8">
-        <div className="flex justify-center animate-in fade-in slide-in-from-left-16 duration-1000">
+        <div className="flex justify-center animate-in fade-in slide-in-from-left-16 duration-1000 order-2 md:order-1 mt-12 md:mt-0">
           {batteryImage && (
             <Image
               src={batteryImage.imageUrl}
               alt={batteryImage.description}
               width={400}
               height={600}
-              className="object-contain drop-shadow-2xl"
+              className="object-contain drop-shadow-2xl w-2/3 h-auto md:w-full max-w-[400px]"
               data-ai-hint={batteryImage.imageHint}
               unoptimized
             />
           )}
         </div>
-        <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 px-4 animate-in fade-in slide-in-from-right-16 duration-1000">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 px-4 animate-in fade-in slide-in-from-right-16 duration-1000 order-1 md:order-2">
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight drop-shadow-lg font-headline">
               Power Your Life with <span className="text-accent">Nature</span>.
             </h1>
