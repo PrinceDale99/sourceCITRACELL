@@ -43,8 +43,8 @@ export default function HeroSection() {
                 </p>
                 <div className="mt-8">
                 <Link href="#cta">
-                    <Button size="lg" variant="outline" className="bg-white/10 border-white/50 text-white hover:bg-white/20 hover:text-white font-bold text-lg px-8 py-6 rounded-full transition-transform duration-300 ease-in-out hover:scale-105 shadow-lg">
-                    Notify Me
+                    <Button size="lg" className="bg-white/10 border-white/30 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:bg-gradient-to-r hover:from-accent/80 hover:to-primary/80 hover:border-transparent hover:text-primary-foreground">
+                        Notify Me
                     </Button>
                 </Link>
                 </div>
