@@ -10,9 +10,9 @@ export default function HeroSection({ nextSection }: { nextSection?: string }) {
   return (
     <section id="hero" className="relative h-[100vh] min-h-[700px] w-full flex items-center text-white overflow-hidden bg-gradient-to-br from-accent/70 via-primary to-green-800">
         {/* Decorative citrus splashes */}
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-yellow-300/20 rounded-full mix-blend-soft-light filter blur-2xl animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-lime-400/20 rounded-full mix-blend-soft-light filter blur-2xl animate-blob animation-delay-4000"></div>
-        <div className="absolute bottom-1/2 right-1/2 w-48 h-48 bg-orange-300/10 rounded-full mix-blend-soft-light filter blur-xl animate-blob"></div>
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-lime-300/20 rounded-full mix-blend-soft-light filter blur-2xl animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-green-400/20 rounded-full mix-blend-soft-light filter blur-2xl animate-blob animation-delay-4000"></div>
+        <div className="absolute bottom-1/2 right-1/2 w-48 h-48 bg-yellow-300/10 rounded-full mix-blend-soft-light filter blur-xl animate-blob"></div>
 
       <div className="relative z-10 container mx-auto px-4 md:px-6 grid md:grid-cols-2 items-center gap-8">
         <div className="flex justify-center animate-in fade-in slide-in-from-left-16 duration-1000 order-2 md:order-1 mt-12 md:mt-0">
@@ -23,7 +23,7 @@ export default function HeroSection({ nextSection }: { nextSection?: string }) {
                 alt={batteryImage.description}
                 width={400}
                 height={600}
-                className="object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.25)] w-1/2 h-auto md:w-2/3 max-w-[300px]"
+                className="object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.25)] w-1/2 h-auto md:w-2/3 max-w-[250px]"
                 data-ai-hint={batteryImage.imageHint}
                 unoptimized
                 />
