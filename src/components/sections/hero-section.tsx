@@ -70,7 +70,7 @@ export default function HeroSection({ nextSection }: { nextSection?: string }) {
                 </div>
 
                 <div className="flex flex-col items-center md:items-start text-center md:text-left animate-in fade-in slide-in-from-right-16 duration-1000">
-                    <h1 className="text-4xl lg:text-5xl font-bold tracking-tight drop-shadow-md font-headline">
+                    <h1 className="text-4xl lg:text-5xl font-bold tracking-tight drop-shadow-md font-headline transition-all duration-300 bg-clip-text text-white hover:text-transparent hover:bg-gradient-to-r hover:from-accent hover:to-green-400">
                         CitraCell
                     </h1>
                     <p className="mt-2 max-w-md text-lg lg:text-xl text-gray-200 drop-shadow-sm">
