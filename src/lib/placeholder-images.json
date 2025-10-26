@@ -9,7 +9,7 @@
     {
       "id": "citracell-battery",
       "description": "A 3D render of the CitraCell battery.",
-      "imageUrl": "./citracell-battery.png",
+      "imageUrl": "/citracell-battery.png",
       "imageHint": "citracell battery"
     },
     {

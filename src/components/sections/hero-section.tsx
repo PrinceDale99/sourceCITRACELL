@@ -64,7 +64,6 @@ export default function HeroSection({ nextSection }: { nextSection?: string }) {
                         className="object-contain drop-shadow-[0_25px_30px_rgba(0,0,0,0.4)] w-[100px] h-auto sm:w-[150px] transition-transform duration-500 ease-in-out group-hover:scale-110"
                         data-ai-hint={batteryImage.imageHint}
                         priority
-                        unoptimized
                         />
                     </div>
                     )}
@@ -98,7 +97,6 @@ export default function HeroSection({ nextSection }: { nextSection?: string }) {
                         height={150}
                         className="object-contain w-[100px] h-auto sm:w-[150px]"
                         data-ai-hint={batteryImage.imageHint}
-                        unoptimized
                     />
                 )}
                 <SplashAnimation />
