@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { CheckCircle, ArrowDown } from 'lucide-react';
+import { CircleCheckBig, ArrowDown } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 
@@ -28,7 +28,7 @@ export default function AboutSection({ nextSection }: { nextSection?: string }) 
             <ul className="space-y-4">
               {benefits.map((benefit, index) => (
                 <li key={index} className="flex items-center gap-3">
-                  <CheckCircle className="h-6 w-6 text-accent" />
+                  <CircleCheckBig className="h-6 w-6 text-accent" />
                   <span className="text-lg text-green-100 font-medium">{benefit}</span>
                 </li>
               ))}
