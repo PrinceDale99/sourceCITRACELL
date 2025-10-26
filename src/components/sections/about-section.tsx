@@ -15,7 +15,7 @@ export default function AboutSection({ nextSection }: { nextSection?: string }) 
   ];
 
   return (
-    <section id="about" className="relative min-h-[100vh] py-24 sm:py-32 bg-background flex items-center snap-start">
+    <section id="about" className="relative min-h-[100vh] py-24 sm:py-32 bg-gradient-to-br from-green-50 to-green-200 flex items-center snap-start">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
           <div className="animate-in fade-in slide-in-from-left-16 duration-1000">
