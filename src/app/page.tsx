@@ -11,7 +11,7 @@ export default function Home() {
     <div className="flex min-h-[100dvh] flex-col bg-background">
       <Header />
       <main className="flex-1">
-        <HeroSection nextSection="about" />
+        <HeroSection />
         <AboutSection nextSection="how-it-works" />
         <HowItWorksSection nextSection="why-it-matters" />
         <WhyItMattersSection nextSection="cta" />
