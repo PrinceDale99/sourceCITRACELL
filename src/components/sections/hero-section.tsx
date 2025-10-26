@@ -2,6 +2,20 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
+
+const CitrusLeaf = ({ className }: { className?: string }) => (
+  <div className={cn("absolute opacity-50 blur-lg", className)}>
+    <svg
+      viewBox="0 0 100 100"
+      className="w-full h-full text-accent/10 fill-current"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M50,0 C80,10 100,40 100,50 C90,80 60,100 50,100 C20,90 0,60 0,50 C10,20 20,0 50,0 Z" transform="rotate(30 50 50)"/>
+    </svg>
+  </div>
+);
+
 
 export default function HeroSection() {
   const batteryImage = PlaceHolderImages.find(img => img.id === 'citracell-battery');
@@ -12,19 +26,18 @@ export default function HeroSection() {
       {/* Background Gradient Animation */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-accent/20 via-primary to-green-900 opacity-70 animate-gradient-xy"></div>
 
-      {/* Citrus Leaf Background Elements */}
+      {/* SVG Citrus Leaf Background Elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute -top-10 -left-12 w-48 h-48 bg-green-300/20 rounded-full blur-2xl animate-blob"></div>
-        <div className="absolute -bottom-12 -right-12 w-64 h-64 bg-accent/20 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
-
-        <div className="absolute top-[10%] left-[5%] w-24 h-12 bg-accent/20 rounded-[50%] rotate-12 blur-sm opacity-50 animate-float"></div>
-        <div className="absolute top-[20%] right-[10%] w-32 h-16 bg-green-300/10 rounded-[50%] -rotate-12 blur-md opacity-40 animate-float animation-delay-2000"></div>
-        <div className="absolute bottom-[15%] left-[20%] w-20 h-10 bg-accent/20 rounded-[50%] rotate-20 opacity-60 animate-float animation-delay-1000"></div>
-        <div className="absolute bottom-[5%] right-[25%] w-28 h-14 bg-green-300/15 rounded-[50%] -rotate-20 blur-sm opacity-50 animate-float animation-delay-3000"></div>
-        <div className="absolute top-[50%] left-[40%] w-16 h-8 bg-accent/10 rounded-[50%] rotate-45 blur-lg opacity-30 animate-float animation-delay-500"></div>
-        <div className="absolute top-[60%] right-[45%] w-20 h-10 bg-green-300/10 rounded-[50%] -rotate-45 blur-xl opacity-20 animate-float animation-delay-1500"></div>
-         <div className="absolute top-[5%] right-[40%] w-24 h-12 bg-accent/20 rounded-[50%] rotate-12 blur-sm opacity-50 animate-float animation-delay-5000"></div>
-        <div className="absolute bottom-[25%] left-[5%] w-32 h-16 bg-green-300/10 rounded-[50%] -rotate-12 blur-md opacity-40 animate-float animation-delay-6000"></div>
+        <CitrusLeaf className="w-48 h-48 -top-10 -left-12 animate-blob" />
+        <CitrusLeaf className="w-64 h-64 -bottom-12 -right-12 animate-blob animation-delay-4000" />
+        <CitrusLeaf className="w-24 h-24 top-[10%] left-[5%] rotate-12 animate-float" />
+        <CitrusLeaf className="w-32 h-32 top-[20%] right-[10%] -rotate-12 animate-float animation-delay-2000" />
+        <CitrusLeaf className="w-20 h-20 bottom-[15%] left-[20%] rotate-20 animate-float animation-delay-1000" />
+        <CitrusLeaf className="w-28 h-28 bottom-[5%] right-[25%] -rotate-20 animate-float animation-delay-3000" />
+        <CitrusLeaf className="w-16 h-16 top-[50%] left-[40%] rotate-45 animate-float animation-delay-500" />
+        <CitrusLeaf className="w-20 h-20 top-[60%] right-[45%] -rotate-45 animate-float animation-delay-1500" />
+        <CitrusLeaf className="w-24 h-24 top-[5%] right-[40%] rotate-12 animate-float animation-delay-5000" />
+        <CitrusLeaf className="w-32 h-32 bottom-[25%] left-[5%] -rotate-12 animate-float animation-delay-6000" />
       </div>
 
       {/* Main Content */}
