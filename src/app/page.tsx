@@ -7,6 +7,7 @@ import CtaSection from '@/components/sections/cta-section';
 import Footer from '@/components/layout/footer';
 import FactSection from '@/components/sections/fact-section';
 import CompanyOverviewSection from '@/components/sections/company-overview-section';
+import InventorsSection from '@/components/sections/inventors-section';
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
         <HeroSection nextSection="fact" />
         <FactSection nextSection="about" />
         <AboutSection nextSection="company-overview" />
-        <CompanyOverviewSection nextSection="how-it-works" />
+        <CompanyOverviewSection nextSection="inventors" />
+        <InventorsSection nextSection="how-it-works" />
         <HowItWorksSection nextSection="why-it-matters" />
         <WhyItMattersSection nextSection="cta" />
         <CtaSection />
