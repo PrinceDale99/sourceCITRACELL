@@ -33,13 +33,13 @@ export default function HeroSection() {
             {/* Product Image */}
             <div className="flex justify-center animate-in fade-in slide-in-from-left-16 duration-1000">
                 {batteryImage && (
-                <div className="animate-subtle-sway">
+                <div className="animate-subtle-sway group">
                     <Image
                     src={batteryImage.imageUrl}
                     alt={batteryImage.description}
                     width={100}
                     height={150}
-                    className="object-contain drop-shadow-[0_25px_30px_rgba(0,0,0,0.4)] w-[100px] h-auto sm:w-[150px]"
+                    className="object-contain drop-shadow-[0_25px_30px_rgba(0,0,0,0.4)] w-[100px] h-auto sm:w-[150px] transition-transform duration-500 ease-in-out group-hover:scale-110"
                     data-ai-hint={batteryImage.imageHint}
                     priority
                     unoptimized
