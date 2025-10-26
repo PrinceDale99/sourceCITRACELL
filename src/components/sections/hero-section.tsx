@@ -32,6 +32,7 @@ export default function HeroSection({ nextSection }: { nextSection?: string }) {
               height={600}
               className="object-contain drop-shadow-2xl"
               data-ai-hint={batteryImage.imageHint}
+              unoptimized
             />
           )}
         </div>
