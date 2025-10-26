@@ -7,10 +7,13 @@ import { cn } from '@/lib/utils';
 import { BatteryCharging, Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 
-const NavLink = ({ href, children, onClick }: { href: string, children: React.ReactNode, onClick?: () => void }) => (
+const NavLink = ({ href, children, onClick, isScrolled }: { href: string, children: React.ReactNode, onClick?: () => void, isScrolled: boolean }) => (
     <Link 
         href={href} 
-        className="text-muted-foreground transition-all duration-300 hover:text-primary"
+        className={cn(
+            "transition-all duration-300 hover:text-primary",
+            isScrolled ? "text-muted-foreground" : "text-white/90 hover:text-white"
+        )}
         onClick={onClick}
     >
         {children}
@@ -35,9 +38,9 @@ export default function Header() {
 
   const navLinks = (
       <>
-        <NavLink href="#about" onClick={closeSheet}>About</NavLink>
-        <NavLink href="#how-it-works" onClick={closeSheet}>How It Works</NavLink>
-        <NavLink href="#why-it-matters" onClick={closeSheet}>Why It Matters</NavLink>
+        <NavLink href="#about" onClick={closeSheet} isScrolled={isScrolled}>About</NavLink>
+        <NavLink href="#how-it-works" onClick={closeSheet} isScrolled={isScrolled}>How It Works</NavLink>
+        <NavLink href="#why-it-matters" onClick={closeSheet} isScrolled={isScrolled}>Why It Matters</NavLink>
       </>
   )
 
@@ -49,19 +52,22 @@ export default function Header() {
       )}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary">
-          <BatteryCharging className="h-6 w-6 text-primary" />
-          <span className="font-headline">CitraCell</span>
+        <Link href="/" className={cn("flex items-center gap-2 font-bold text-lg", isScrolled ? "text-primary" : "text-white")}>
+          <BatteryCharging className={cn("h-6 w-6", isScrolled ? "text-primary" : "text-white")} />
+          <span className="font-headline drop-shadow-sm">CitraCell</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navLinks}
-          <Button asChild variant="default" size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-transform duration-300 ease-in-out hover:scale-105">
+          <Button asChild variant={isScrolled ? "default" : "outline"} size="sm" className={cn(
+              "font-semibold transition-transform duration-300 ease-in-out hover:scale-105",
+              !isScrolled && "bg-white/10 border-white/50 text-white hover:bg-white/20 hover:text-white"
+          )}>
             <Link href="#cta">Get Notified</Link>
           </Button>
         </nav>
         <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="md:hidden">
+            <Button variant="outline" size="icon" className={cn("md:hidden", !isScrolled && "text-white bg-transparent border-white/50 hover:bg-white/10 hover:text-white")}>
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
@@ -73,7 +79,9 @@ export default function Header() {
                     <span className="font-headline">CitraCell</span>
                 </Link>
                 <nav className="flex flex-col gap-4 text-lg">
-                  {navLinks}
+                    <Link href="#about" onClick={closeSheet} className="text-muted-foreground transition-all duration-300 hover:text-primary">About</Link>
+                    <Link href="#how-it-works" onClick={closeSheet} className="text-muted-foreground transition-all duration-300 hover:text-primary">How It Works</Link>
+                    <Link href="#why-it-matters" onClick={closeSheet} className="text-muted-foreground transition-all duration-300 hover:text-primary">Why It Matters</Link>
                 </nav>
                 <Button asChild variant="default" className="mt-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-transform duration-300 ease-in-out hover:scale-105">
                     <Link href="#cta" onClick={closeSheet}>Get Notified</Link>
