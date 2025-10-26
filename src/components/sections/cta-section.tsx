@@ -42,7 +42,7 @@ export default function CtaSection() {
   }
 
   return (
-    <section id="cta" className="min-h-[70vh] py-24 sm:py-32 bg-gradient-to-br from-primary via-green-700 to-teal-800 text-primary-foreground flex items-center scroll-snap-start">
+    <section id="cta" className="min-h-[70vh] py-24 sm:py-32 bg-gradient-to-br from-primary via-green-700 to-teal-800 text-primary-foreground flex items-center snap-start">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-in fade-in slide-in-from-left-16 duration-1000">

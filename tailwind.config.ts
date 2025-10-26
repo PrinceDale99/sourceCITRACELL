@@ -157,5 +157,5 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), require('tailwindcss-scroll-snap')],
+  plugins: [require('tailwindcss-animate')],
 } satisfies Config;

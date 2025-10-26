@@ -1,9 +1,13 @@
+"use client";
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { ArrowDown } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import SplashAnimation from './splash-animation';
 
 const CitrusLeaf = ({ className }: { className?: string }) => (
   <div className={cn("absolute opacity-50 blur-lg", className)}>
@@ -20,9 +24,22 @@ const CitrusLeaf = ({ className }: { className?: string }) => (
 
 export default function HeroSection({ nextSection }: { nextSection?: string }) {
   const batteryImage = PlaceHolderImages.find(img => img.id === 'citracell-battery');
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.getElementById('hero');
+      if (heroSection) {
+        const { top } = heroSection.getBoundingClientRect();
+        setIsScrolled(top < -50);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <section id="hero" className="relative h-[100vh] w-full flex items-center justify-center text-white overflow-hidden bg-gradient-to-br from-green-400/30 via-primary to-green-900 scroll-snap-start">
+    <section id="hero" className="relative h-[100vh] w-full flex items-center justify-center text-white overflow-hidden bg-gradient-to-br from-green-400/30 via-primary to-green-900 snap-start">
       
       {/* Background Gradient Animation */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-accent/20 via-primary to-green-900 opacity-70 animate-gradient-xy"></div>
@@ -42,46 +59,67 @@ export default function HeroSection({ nextSection }: { nextSection?: string }) {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Product Image */}
-            <div className="flex justify-center animate-in fade-in slide-in-from-left-16 duration-1000">
-                {batteryImage && (
-                <div className="animate-subtle-sway group">
-                    <Image
-                    src={batteryImage.imageUrl}
-                    alt={batteryImage.description}
-                    width={100}
-                    height={150}
-                    className="object-contain drop-shadow-[0_25px_30px_rgba(0,0,0,0.4)] w-[100px] h-auto sm:w-[150px] transition-transform duration-500 ease-in-out group-hover:scale-110"
-                    data-ai-hint={batteryImage.imageHint}
-                    priority
-                    unoptimized
-                    />
+      <div className="relative z-10 container mx-auto px-4 md:px-6 w-full">
+        <div className={cn("transition-opacity duration-500", isScrolled ? 'opacity-0' : 'opacity-100')}>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Product Image */}
+                <div className="flex justify-center animate-in fade-in slide-in-from-left-16 duration-1000">
+                    {batteryImage && (
+                    <div className="animate-subtle-sway group">
+                        <Image
+                        src={batteryImage.imageUrl}
+                        alt={batteryImage.description}
+                        width={100}
+                        height={150}
+                        className="object-contain drop-shadow-[0_25px_30px_rgba(0,0,0,0.4)] w-[100px] h-auto sm:w-[150px] transition-transform duration-500 ease-in-out group-hover:scale-110"
+                        data-ai-hint={batteryImage.imageHint}
+                        priority
+                        unoptimized
+                        />
+                    </div>
+                    )}
                 </div>
-                )}
-            </div>
 
-            {/* Text and CTA */}
-            <div className="flex flex-col items-center md:items-start text-center md:text-left animate-in fade-in slide-in-from-right-16 duration-1000">
-                <h1 className="text-4xl lg:text-5xl font-bold tracking-tight drop-shadow-md font-headline">
-                    CitraCell
-                </h1>
-                <p className="mt-2 max-w-md text-lg lg:text-xl text-gray-200 drop-shadow-sm">
-                    Refillable Battery Powered by Kamias
-                </p>
-                <div className="mt-8">
-                <Link href="#cta">
-                    <Button size="lg" className="bg-white/10 border-white/30 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:bg-gradient-to-r hover:from-accent/80 hover:to-primary/80 hover:border-transparent hover:text-primary-foreground">
-                        Join Wishlist
-                    </Button>
-                </Link>
+                {/* Text and CTA */}
+                <div className="flex flex-col items-center md:items-start text-center md:text-left animate-in fade-in slide-in-from-right-16 duration-1000">
+                    <h1 className="text-4xl lg:text-5xl font-bold tracking-tight drop-shadow-md font-headline">
+                        CitraCell
+                    </h1>
+                    <p className="mt-2 max-w-md text-lg lg:text-xl text-gray-200 drop-shadow-sm">
+                        Refillable Battery Powered by Kamias
+                    </p>
+                    <div className="mt-8">
+                    <Link href="#cta">
+                        <Button size="lg" className="bg-white/10 border-white/30 text-white font-bold text-lg px-8 py-6 rounded-full shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:bg-gradient-to-r hover:from-accent/80 hover:to-primary/80 hover:border-transparent hover:text-primary-foreground">
+                            Join Wishlist
+                        </Button>
+                    </Link>
+                    </div>
                 </div>
             </div>
         </div>
+
+        {/* Animated elements */}
+        <div className={cn("absolute inset-0 flex items-center justify-center transition-opacity duration-500", isScrolled ? 'opacity-100' : 'opacity-0 pointer-events-none')}>
+            <div className="w-full flex items-center justify-around">
+                {batteryImage && (
+                    <Image
+                        src={batteryImage.imageUrl}
+                        alt={batteryImage.description}
+                        width={100}
+                        height={150}
+                        className="object-contain w-[100px] h-auto sm:w-[150px]"
+                        data-ai-hint={batteryImage.imageHint}
+                        unoptimized
+                    />
+                )}
+                <SplashAnimation />
+            </div>
+        </div>
+
       </div>
       {nextSection && (
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+        <div className={cn("absolute bottom-10 left-1/2 -translate-x-1/2 z-10 transition-opacity duration-500", isScrolled ? 'opacity-0' : 'opacity-100')}>
           <Link href={`#${nextSection}`}>
             <Button variant="outline" size="icon" className="rounded-full animate-bounce">
               <ArrowDown className="h-6 w-6" />
