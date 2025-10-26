@@ -93,6 +93,18 @@ export default {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      fontWeight: {
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+        extrabold: '800',
+      },
+      letterSpacing: {
+        tight: '-0.02em',
+        normal: '0',
+        wide: '0.02em',
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
