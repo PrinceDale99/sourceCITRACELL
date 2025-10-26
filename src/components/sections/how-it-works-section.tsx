@@ -14,12 +14,12 @@ const steps: Step[] = [
   {
     icon: LogIn,
     title: "1. Insert",
-    description: "Place a fresh lime slice into the CitraCell cartridge. The more juice, the better!",
+    description: "Place a few fresh kamias fruits into the CitraCell cartridge. The juicier, the better!",
   },
   {
     icon: Power,
     title: "2. Activate",
-    description: "The natural citric acid interacts with our patented electrodes, kickstarting the energy generation process instantly.",
+    description: "The natural acids in the kamias interact with our patented electrodes, kickstarting the energy generation process instantly.",
   },
   {
     icon: BatteryCharging,
@@ -37,7 +37,7 @@ export default function HowItWorksSection({ nextSection }: { nextSection?: strin
             Simple, Clean, and Powerful
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Using CitraCell is as easy as making a refreshing drink. Three simple steps to a greener lifestyle.
+            Using CitraCell is incredibly easy. Three simple steps to a greener lifestyle.
             </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">

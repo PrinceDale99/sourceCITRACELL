@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'CitraCell - Power Your Life with Nature',
-  description: 'The revolutionary battery powered by the natural energy of citrus.',
+  description: 'The revolutionary battery powered by the natural energy of kamias (bilimbi).',
 };
 
 export default function RootLayout({

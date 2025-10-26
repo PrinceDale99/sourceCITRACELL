@@ -13,12 +13,12 @@ const advantages: Advantage[] = [
   {
     icon: Leaf,
     title: "Eco-Friendly",
-    description: "Our batteries are 100% organic and biodegradable. After use, they can be safely composted, leaving no trace behind.",
+    description: "Our batteries are 100% organic and biodegradable. After use, the kamias fruit can be safely composted, leaving no trace behind.",
   },
   {
     icon: DollarSign,
     title: "Cost-Effective",
-    description: "Slash your reliance on grid power for small devices. A single citrus fruit can provide power for less than a cent per hour.",
+    description: "Slash your reliance on grid power for small devices. A handful of kamias can provide power for less than a cent per hour.",
   },
   {
     icon: ShieldCheck,
@@ -28,7 +28,7 @@ const advantages: Advantage[] = [
   {
     icon: Recycle,
     title: "Reduces Waste",
-    description: "Give a second life to citrus fruits that are past their prime. CitraCell helps reduce food waste and landfill burden.",
+    description: "Give a second life to kamias fruits that are past their prime. CitraCell helps reduce food waste and landfill burden.",
   },
 ];
 

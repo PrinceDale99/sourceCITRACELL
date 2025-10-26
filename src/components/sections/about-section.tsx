@@ -9,7 +9,7 @@ export default function AboutSection({ nextSection }: { nextSection?: string }) 
   const aboutImage = PlaceHolderImages.find(img => img.id === 'about-image');
   const benefits = [
     "Sustainable energy source",
-    "Reduces household waste",
+    "Reduces fruit waste",
     "Completely non-toxic and safe",
     "Simple and intuitive to use"
   ];
@@ -23,7 +23,7 @@ export default function AboutSection({ nextSection }: { nextSection?: string }) 
               What is CitraCell?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              CitraCell is a groundbreaking bio-battery that harnesses the electrochemical properties of citric acid to generate power. By simply inserting a slice of lime or other citrus fruit, you can power small electronic devices for hours. It's a leap forward in personal, sustainable energy.
+              CitraCell is a groundbreaking bio-battery that harnesses the electrochemical properties of the kamias fruit (also known as bilimbi). By simply inserting a few kamias fruits, you can power small electronic devices for hours. It's a leap forward in personal, sustainable energy.
             </p>
             <ul className="space-y-4">
               {benefits.map((benefit, index) => (

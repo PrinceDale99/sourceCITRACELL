@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A background image showing citrus fruits.",
+      "description": "A background image showing kamias fruits.",
       "imageUrl": "https://images.unsplash.com/photo-1572096082104-1a93185c9a45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYXR0ZXJ5JTIwbGltZXxlbnwwfHx8fDE3NjE0NzY3MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "citrus background"
+      "imageHint": "kamias bilimbi"
     },
     {
       "id": "citracell-battery",
@@ -14,9 +14,9 @@
     },
     {
       "id": "about-image",
-      "description": "A conceptual image showing citrus fruit and technology.",
-      "imageUrl": "https://images.unsplash.com/photo-1605869724169-c6639a890de0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2l0cnVzJTIwZnJ1aXQlMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc2MTQ3NjcxNHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "citrus fruit technology"
+      "description": "A conceptual image showing kamias fruit and technology.",
+      "imageUrl": "https://images.unsplash.com/photo-1734076458934-89682bb30eaa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxrYW1pYXMlMjBmcnVpdCUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNzYxNDc5Njg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kamias fruit technology"
     }
   ]
 }

@@ -33,7 +33,7 @@ export default function HeroSection({ nextSection }: { nextSection?: string }) {
               Power Your Life with <span className="text-accent">Nature</span>.
             </h1>
             <p className="max-w-xl text-lg md:text-xl text-gray-200 drop-shadow-md leading-relaxed">
-              Introducing CitraCell, the revolutionary battery powered by the natural energy of citrus. Clean, sustainable, and surprisingly powerful.
+              Introducing CitraCell, the revolutionary battery powered by the natural energy of kamias (bilimbi). Clean, sustainable, and surprisingly powerful.
             </p>
             <div className="flex gap-4 mt-4">
                 <Link href="#cta">
