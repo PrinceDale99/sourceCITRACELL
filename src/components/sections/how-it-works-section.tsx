@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { LogIn, Power, BatteryCharging } from 'lucide-react';
+import { LogIn, Power, BatteryCharging, ArrowDown } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import Link from 'next/link';
+import { Button } from '../ui/button';
 
 interface Step {
   icon: LucideIcon;
@@ -26,9 +28,9 @@ const steps: Step[] = [
   },
 ];
 
-export default function HowItWorksSection() {
+export default function HowItWorksSection({ nextSection }: { nextSection?: string }) {
   return (
-    <section id="how-it-works" className="py-24 sm:py-32 bg-muted/50">
+    <section id="how-it-works" className="relative min-h-[100vh] py-24 sm:py-32 bg-muted/50 flex items-center">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <div className="mb-16 animate-in fade-in slide-in-from-bottom-16 duration-1000">
             <h2 className="text-4xl md:text-5xl font-bold text-primary font-headline">
@@ -56,6 +58,15 @@ export default function HowItWorksSection() {
           ))}
         </div>
       </div>
+       {nextSection && (
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+          <Link href={`#${nextSection}`}>
+            <Button variant="outline" size="icon" className="rounded-full animate-bounce">
+              <ArrowDown className="h-6 w-6" />
+            </Button>
+          </Link>
+        </div>
+      )}
     </section>
   );
 }

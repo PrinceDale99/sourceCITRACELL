@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, ArrowDown } from 'lucide-react';
+import Link from 'next/link';
+import { Button } from '../ui/button';
 
-export default function AboutSection() {
+export default function AboutSection({ nextSection }: { nextSection?: string }) {
   const aboutImage = PlaceHolderImages.find(img => img.id === 'about-image');
   const benefits = [
     "Sustainable energy source",
@@ -13,7 +15,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-24 sm:py-32 bg-background">
+    <section id="about" className="relative min-h-[100vh] py-24 sm:py-32 bg-background flex items-center">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
           <div className="animate-in fade-in slide-in-from-left-16 duration-1000">
@@ -50,6 +52,15 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
+      {nextSection && (
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+          <Link href={`#${nextSection}`}>
+            <Button variant="outline" size="icon" className="rounded-full animate-bounce">
+              <ArrowDown className="h-6 w-6" />
+            </Button>
+          </Link>
+        </div>
+      )}
     </section>
   );
 }

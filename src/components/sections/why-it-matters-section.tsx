@@ -1,5 +1,7 @@
-import { Leaf, DollarSign, ShieldCheck, Recycle } from 'lucide-react';
+import { Leaf, DollarSign, ShieldCheck, Recycle, ArrowDown } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import Link from 'next/link';
+import { Button } from '../ui/button';
 
 interface Advantage {
     icon: LucideIcon;
@@ -30,9 +32,9 @@ const advantages: Advantage[] = [
   },
 ];
 
-export default function WhyItMattersSection() {
+export default function WhyItMattersSection({ nextSection }: { nextSection?: string }) {
   return (
-    <section id="why-it-matters" className="py-24 sm:py-32 bg-background">
+    <section id="why-it-matters" className="relative min-h-[100vh] py-24 sm:py-32 bg-background flex items-center">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-16 duration-1000">
             <h2 className="text-4xl md:text-5xl font-bold text-primary font-headline">A Greener Tomorrow, Today</h2>
@@ -52,6 +54,15 @@ export default function WhyItMattersSection() {
           ))}
         </div>
       </div>
+      {nextSection && (
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+          <Link href={`#${nextSection}`}>
+            <Button variant="outline" size="icon" className="rounded-full animate-bounce">
+              <ArrowDown className="h-6 w-6" />
+            </Button>
+          </Link>
+        </div>
+      )}
     </section>
   );
 }

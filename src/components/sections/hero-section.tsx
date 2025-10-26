@@ -2,12 +2,13 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Link from 'next/link';
+import { ArrowDown } from 'lucide-react';
 
-export default function HeroSection() {
+export default function HeroSection({ nextSection }: { nextSection?: string }) {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-image');
 
   return (
-    <section className="relative h-[90vh] min-h-[700px] w-full flex items-center justify-center text-center text-white overflow-hidden">
+    <section id="hero" className="relative h-[100vh] min-h-[700px] w-full flex items-center justify-center text-center text-white overflow-hidden">
       {heroImage && (
         <Image
           src={heroImage.imageUrl}
@@ -34,6 +35,15 @@ export default function HeroSection() {
             </Link>
         </div>
       </div>
+      {nextSection && (
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+          <Link href={`#${nextSection}`}>
+            <Button variant="outline" size="icon" className="rounded-full bg-transparent text-white border-white/50 hover:bg-white/10 hover:text-white animate-bounce">
+              <ArrowDown className="h-6 w-6" />
+            </Button>
+          </Link>
+        </div>
+      )}
     </section>
   );
 }
