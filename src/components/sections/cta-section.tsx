@@ -42,7 +42,7 @@ export default function CtaSection() {
   }
 
   return (
-    <section id="cta" className="min-h-[70vh] py-24 sm:py-32 bg-gradient-to-br from-primary via-green-700 to-teal-800 text-primary-foreground flex items-center snap-start">
+    <section id="cta" className="min-h-[70vh] py-24 sm:py-32 bg-gradient-to-br from-primary via-green-800 to-green-900 text-primary-foreground flex items-center snap-start">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-in fade-in slide-in-from-left-16 duration-1000">
@@ -55,11 +55,11 @@ export default function CtaSection() {
             </div>
 
             <div className="animate-in fade-in slide-in-from-right-16 duration-1000">
-                <Card className="bg-background/20 backdrop-blur-md border-white/20">
+                <Card className="bg-background/10 backdrop-blur-md border-white/20">
                     <CardHeader>
                         <CardTitle className="text-white">Join the Wishlist</CardTitle>
                         <CardDescription className="text-gray-300">
-                        Enter your email to join the wishlist.
+                        Enter your email to join the waitlist and get notified at launch.
                         </CardDescription>
                     </CardHeader>
                     <CardContent>
