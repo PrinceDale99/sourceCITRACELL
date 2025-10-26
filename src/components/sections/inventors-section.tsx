@@ -3,12 +3,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
+import placeholderData from '@/lib/placeholder-images.json';
+
+const { placeholderImages: PlaceHolderImages } = placeholderData;
+
 
 interface Inventor {
     id: string;
     name: string;
-    image: ReturnType<typeof PlaceHolderImages.find>;
+    image: (typeof PlaceHolderImages)[number] | undefined;
 }
 
 const inventors: Inventor[] = [

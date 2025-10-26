@@ -2,12 +2,14 @@
 
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import placeholderData from '@/lib/placeholder-images.json';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { ArrowDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import SplashAnimation from './splash-animation';
+
+const { placeholderImages: PlaceHolderImages } = placeholderData;
 
 const CitrusLeaf = ({ className }: { className?: string }) => (
     <svg viewBox="0 0 100 100" className={cn("absolute fill-current text-accent/10 blur-sm", className)} xmlns="http://www.w3.org/2000/svg">
